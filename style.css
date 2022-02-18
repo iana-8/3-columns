@@ -9,16 +9,26 @@
     --Very-light-gray: hsl(0, 0%, 95%);
     --font-s: 15px;
     --ff-400: 'Lexend Deca', sans-serif;
-    --ff-700: 'Big Shoulders Display', cursive;
+    --ff-700: 'Big Shoulders Display', sans-serif;
 }
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 66%;
-    margin: auto;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+*,
+*::before,
+*,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 1440px;
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow: hidden;
+    background: var(--Very-light-gray);
+}
+.container {
+    display: flex;
+  
 }
 p {
     color: var(--Very-light-gray);
@@ -29,7 +39,7 @@ p {
 h1 {
     color: var(--Very-light-gray);
     font-family: var(--ff-700);
-    font-size: 42px;
+    font-size: 36px;
     text-transform: uppercase;
     font-weight: 700;
     padding-top: 14px;
@@ -38,28 +48,34 @@ img {
     margin-top: 15px;
 }
 .cards {
-    line-height: 1.6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 66%;
+    height: 100vh;
+    margin: auto;
+    align-items: center;  
 }
+
 .card-1 {
-    padding: 36px;
+    padding: 50px;
     background: var(--Bright-orange);
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 .card-2 {
     background: var(--Dark-cyan);
-    padding: 36px;
+    padding: 50px;
 }
 .card-3 {
     background: var(--Very-dark-cyan);
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    padding: 36px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 50px;
 }
 button {
     background: var(--Very-light-gray);
-    padding: 15px 35px;
-    border: none;
+    padding: 13px 48px;
+    border: 2px solid var(--Very-light-gray);
     font-size: var(--font-s);
     font-family: var(--ff-400);
     border-radius: 40px;
@@ -82,10 +98,11 @@ button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .cards{
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    width: 100%;
+    grid-template-columns: 1fr;
+    width: 50%;
+    place-items: center;
     }
 }
