@@ -26,10 +26,7 @@ body {
     overflow: hidden;
     background: var(--Very-light-gray);
 }
-.container {
-    display: flex;
-  
-}
+
 p {
     color: var(--Very-light-gray);
     font-size: var(--font-s);
@@ -43,6 +40,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 700;
     padding-top: 14px;
+    padding-bottom: 39px;
 }
 img {
     margin-top: 15px;
